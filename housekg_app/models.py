@@ -10,7 +10,7 @@ class UserProfile(AbstractUser):
     phone_number = PhoneNumberField(null= True , blank= True)
     photo = models.ImageField(upload_to= 'user_images',null=True , blank= True)
     ROLE_CHOICES = (
-        ('seller', 'selver'),
+        ('seller', 'seller'),
         ('buyer', 'buyer'))
     user_role = models.CharField(choices=ROLE_CHOICES,max_length= 16,default='buyer')
 
